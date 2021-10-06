@@ -2,9 +2,10 @@ import { useEffect, useState, useRef } from 'react';
 import MountainCard from './MountainCard';
 
 const RandomCardDisplay = (props) => {
-  const { mountains } = props;
+  const { mountains, handleClick } = props;
 
   const mountainRef = useRef(mountains);
+  const handleClickRef = useRef(handleClick);
   const [mountainsToDisplay, setMountainsToDisplay] = useState([]);
 
   useEffect(() => {
@@ -28,9 +29,11 @@ const RandomCardDisplay = (props) => {
     const mountainCards = randomMountains.map((mt) => {
       return (
         <MountainCard
+          handleClick={handleClickRef.current}
           name={mt.name}
           height={mt.height}
-          imagePath={mt.imagePath}
+          image={mt.image}
+          id={mt.id}
           key={mt.id}
         />
       );

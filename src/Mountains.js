@@ -1,3 +1,23 @@
+import Everest from './media/01-Everest.png';
+import K2 from './media/02-K2.png';
+import Kangchenjunga from './media/03-Kangchenjunga.png';
+import Lhotse from './media/04-Lhotse.png';
+import Makalu from './media/05-Makalu.png';
+import ChoOyu from './media/06-Cho-Oyu.png';
+import DhaulagiriI from './media/07-Dhaulagiri-I.png';
+import Manaslu from './media/08-Manaslu.png';
+import NangaParbat from './media/09-Nanga-Parbat.png';
+import AnnapurnaI from './media/10-Annapurna-I.png';
+import GasherbrumI from './media/11-Gasherbrum-I.png';
+import BroadPeak from './media/12-Broad-Peak.png';
+import GasherbrumII from './media/13-Gasherbrum-II.png';
+import ShishaPangma from './media/14-Shisha-Pangma.png';
+import GyachungKang from './media/15-Gyachung-Kang.png';
+import GasherbrumIII from './media/16-Gasherbrum-III.png';
+import AnnapurnaII from './media/17-Annapurna-II.png';
+import GasherbrumIV from './media/18-Gasherbrum-IV.png';
+import Himalchuli from './media/19-Himalchuli.png';
+
 const mountainNames = [
   'Mount Everest',
   'K2',
@@ -25,35 +45,35 @@ const mountainHeights = [
   8027, 7952, 7946, 7937, 7932, 7893,
 ];
 
-const mountainImagePaths = [
-  './media/01-Everest.png',
-  './media/02-K2.png',
-  './media/03-Kangchenjunga.png',
-  './media/04-Lhotse.png',
-  './media/05-Makalu.png',
-  './media/06-Cho-Oyu.png',
-  './media/07-Dhaulagiri-I.png',
-  './media/08-Manaslu.png',
-  './media/09-Nanga-Parbat.png',
-  './media/10-Annapurna-I.png',
-  './media/11-Gasherbrum-I.png',
-  './media/12-Broad-Peak.png',
-  './media/13-Gasherbrum-II.png',
-  './media/14-Shisha-Pangma.png',
-  './media/15-Gyachung-Kang.png',
-  './media/16-Gasherbrum-III.png',
-  './media/17-Annapurna-II.png',
-  './media/18-Gasherbrum-IV.png',
-  './media/19-Himalchuli.png',
+const mountainImages = [
+  Everest,
+  K2,
+  Kangchenjunga,
+  Lhotse,
+  Makalu,
+  ChoOyu,
+  DhaulagiriI,
+  Manaslu,
+  NangaParbat,
+  AnnapurnaI,
+  GasherbrumI,
+  BroadPeak,
+  GasherbrumII,
+  ShishaPangma,
+  GyachungKang,
+  GasherbrumIII,
+  AnnapurnaII,
+  GasherbrumIV,
+  Himalchuli,
 ];
 
 class Mountain {
-  constructor(name, height, imagePath, id) {
+  constructor(name, height, image, id) {
     this.name = name;
     this.height = height;
-    this.imagePath = imagePath;
+    this.image = image;
     this.id = id;
   }
 }
 
-export { Mountain, mountainHeights, mountainImagePaths, mountainNames };
+export { Mountain, mountainHeights, mountainImages, mountainNames };

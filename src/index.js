@@ -5,7 +5,7 @@ import {
   Mountain,
   mountainNames,
   mountainHeights,
-  mountainImagePaths,
+  mountainImages,
 } from './Mountains';
 import uniqid from 'uniqid';
 
@@ -15,7 +15,7 @@ const generateMountains = () => {
     const mountain = new Mountain(
       mountainNames[i],
       mountainHeights[i],
-      mountainImagePaths[i],
+      mountainImages[i],
       uniqid()
     );
     mountains.push(mountain);
