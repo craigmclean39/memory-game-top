@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import MountainCard from './MountainCard';
+import '../styles/mountainCard.css';
 
 const RandomCardDisplay = (props) => {
   const { mountains, handleClick, selectedMountains } = props;
@@ -13,7 +14,7 @@ const RandomCardDisplay = (props) => {
   useEffect(() => {
     const randomMountains = [];
     const randomIndexes = [];
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 6; i++) {
       let duplicate = true;
 
       // No duplicates in display
@@ -67,7 +68,7 @@ const RandomCardDisplay = (props) => {
     setMountainsToDisplay(mountainCards);
   }, []);
 
-  return <div>{mountainsToDisplay}</div>;
+  return <div className='card-display'>{mountainsToDisplay}</div>;
 };
 
 export default RandomCardDisplay;

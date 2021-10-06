@@ -3,6 +3,7 @@ import { useState } from 'react';
 import uniqueid from 'uniqid';
 import Gameplay from './Gameplay';
 import GameOver from './GameOver';
+import GameStart from './GameStart';
 
 const MemoryGame = (props) => {
   const { mountains } = props;
@@ -20,6 +21,7 @@ const MemoryGame = (props) => {
   const [isGameOver, setIsGameOver] = useState(false);
   const [wonGame, setWonGame] = useState(false);
   const [finalScore, setFinalScore] = useState(0);
+  const [newGame, setNewGame] = useState(true);
 
   const setScore = (value) => {
     scoreRef.current = value;
@@ -65,6 +67,7 @@ const MemoryGame = (props) => {
   };
 
   const restartGame = (e) => {
+    setNewGame(false);
     setIsGameOver(false);
     setWonGame(false);
     setScore(0);
@@ -73,7 +76,9 @@ const MemoryGame = (props) => {
     setCardDisplayKey(uniqueid());
   };
 
-  return !isGameOver ? (
+  return newGame ? (
+    <GameStart startGame={restartGame} />
+  ) : !isGameOver ? (
     <Gameplay
       score={score}
       hiScore={hiScore}

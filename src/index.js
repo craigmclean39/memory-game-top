@@ -9,6 +9,7 @@ import {
   mountainCountries,
 } from './Mountains';
 import uniqid from 'uniqid';
+import './styles/reset.css';
 
 const mountains = [];
 const generateMountains = () => {
