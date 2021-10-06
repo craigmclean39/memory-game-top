@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
 import { useState } from 'react';
-import RandomCardDisplay from './RandomCardDisplay';
 import uniqueid from 'uniqid';
+import Gameplay from './Gameplay';
+import GameOver from './GameOver';
 
 const MemoryGame = (props) => {
   const { mountains } = props;
@@ -16,6 +17,9 @@ const MemoryGame = (props) => {
   const selectedMountainsRef = useRef(selectedMountains);
 
   const [cardDisplayKey, setCardDisplayKey] = useState(uniqueid());
+  const [isGameOver, setIsGameOver] = useState(false);
+  const [wonGame, setWonGame] = useState(false);
+  const [finalScore, setFinalScore] = useState(0);
 
   const setScore = (value) => {
     scoreRef.current = value;
@@ -33,12 +37,9 @@ const MemoryGame = (props) => {
   };
 
   const handleClick = (event, id) => {
-    console.log(event);
-    console.log(id);
-
     if (selectedMountainsRef.current.includes(id)) {
-      console.log('Game Over');
-
+      setIsGameOver(true);
+      setFinalScore(scoreRef.current);
       if (scoreRef.current > hiScore) {
         setHiScore(scoreRef.current);
       }
@@ -51,9 +52,11 @@ const MemoryGame = (props) => {
       setSelectedMountains([...selectedMountainsRef.current, id]);
 
       if (scoreRef.current === mountains.length) {
-        console.log('You Win');
+        setIsGameOver(true);
+        setWonGame(true);
         setScore(0);
         setSelectedMountains([]);
+        setFinalScore(mountains.length);
       }
 
       // This forces a remount
@@ -61,17 +64,30 @@ const MemoryGame = (props) => {
     }
   };
 
-  return (
-    <div>
-      <div>Score: {score} </div>
-      <div>Hi Score: {hiScore} </div>
-      <RandomCardDisplay
-        key={cardDisplayKey}
-        mountains={mountains}
-        selectedMountains={selectedMountains}
-        handleClick={handleClick}
-      />
-    </div>
+  const restartGame = (e) => {
+    setIsGameOver(false);
+    setWonGame(false);
+    setScore(0);
+    setSelectedMountains([]);
+    setFinalScore(0);
+    setCardDisplayKey(uniqueid());
+  };
+
+  return !isGameOver ? (
+    <Gameplay
+      score={score}
+      hiScore={hiScore}
+      cardDisplayKey={cardDisplayKey}
+      mountains={mountains}
+      selectedMountains={selectedMountains}
+      handleClick={handleClick}
+    />
+  ) : (
+    <GameOver
+      wonGame={wonGame}
+      finalScore={finalScore}
+      restartGame={restartGame}
+    />
   );
 };
 
