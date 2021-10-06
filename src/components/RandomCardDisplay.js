@@ -9,9 +9,8 @@ const RandomCardDisplay = (props) => {
   const selectedMountainsRef = useRef(selectedMountains);
   const [mountainsToDisplay, setMountainsToDisplay] = useState([]);
 
+  // On Mount
   useEffect(() => {
-    console.log('Mounting RandomCardDisplay');
-
     const randomMountains = [];
     const randomIndexes = [];
     for (let i = 0; i < 8; i++) {
@@ -58,6 +57,7 @@ const RandomCardDisplay = (props) => {
           name={mt.name}
           height={mt.height}
           image={mt.image}
+          countries={mt.countries}
           id={mt.id}
           key={mt.id}
         />

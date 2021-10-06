@@ -6,6 +6,7 @@ import {
   mountainNames,
   mountainHeights,
   mountainImages,
+  mountainCountries,
 } from './Mountains';
 import uniqid from 'uniqid';
 
@@ -16,6 +17,7 @@ const generateMountains = () => {
       mountainNames[i],
       mountainHeights[i],
       mountainImages[i],
+      mountainCountries[i],
       uniqid()
     );
     mountains.push(mountain);

@@ -18,6 +18,11 @@ import AnnapurnaII from './media/17-Annapurna-II.png';
 import GasherbrumIV from './media/18-Gasherbrum-IV.png';
 import Himalchuli from './media/19-Himalchuli.png';
 
+import ChinaFlag from './media/flags/china.png';
+import NepalFlag from './media/flags/nepal.png';
+import IndiaFlag from './media/flags/india.png';
+import PakistanFlag from './media/flags/pakistan.png';
+
 const mountainNames = [
   'Mount Everest',
   'K2',
@@ -38,6 +43,28 @@ const mountainNames = [
   'Annapurna II',
   'Gasherbrum IV',
   'Himalchuli',
+];
+
+const mountainCountries = [
+  ['Nepal', 'China'],
+  ['Pakistan', 'China'],
+  ['Nepal', 'India'],
+  ['Nepal', 'China'],
+  ['Nepal', 'China'],
+  ['Nepal', 'China'],
+  ['Nepal'],
+  ['Nepal'],
+  ['Pakistan'],
+  ['Nepal'],
+  ['Pakistan', 'China'],
+  ['Pakistan', 'China'],
+  ['Pakistan', 'China'],
+  ['China'],
+  ['Nepal', 'China'],
+  ['Pakistan', 'China'],
+  ['Nepal'],
+  ['Pakistan'],
+  ['Nepal'],
 ];
 
 const mountainHeights = [
@@ -67,13 +94,40 @@ const mountainImages = [
   Himalchuli,
 ];
 
+const GetFlag = (country) => {
+  switch (country) {
+    case 'Nepal': {
+      return NepalFlag;
+    }
+    case 'India': {
+      return IndiaFlag;
+    }
+    case 'Pakistan': {
+      return PakistanFlag;
+    }
+    case 'China': {
+      return ChinaFlag;
+    }
+    default:
+      return NepalFlag;
+  }
+};
+
 class Mountain {
-  constructor(name, height, image, id) {
+  constructor(name, height, image, countries, id) {
     this.name = name;
     this.height = height;
     this.image = image;
     this.id = id;
+    this.countries = countries;
   }
 }
 
-export { Mountain, mountainHeights, mountainImages, mountainNames };
+export {
+  Mountain,
+  mountainHeights,
+  mountainImages,
+  mountainNames,
+  mountainCountries,
+  GetFlag,
+};
