@@ -8,7 +8,7 @@ const MountainCard = (props) => {
         onClick={(e) => {
           handleClick(e, id);
         }}>
-        <img src={image} alt={name} width='300px' height='300px' />
+        <img src={image} alt={name} width='150px' height='150px' />
         <div>{`${name} ${height}`}</div>
       </div>
     </React.Fragment>
