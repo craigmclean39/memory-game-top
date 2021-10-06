@@ -1,4 +1,5 @@
 import RandomCardDisplay from './RandomCardDisplay';
+import Scoreboard from './Scoreboard';
 
 const Gameplay = (props) => {
   const {
@@ -12,14 +13,15 @@ const Gameplay = (props) => {
 
   return (
     <div>
-      <div>Score: {score} </div>
-      <div>Hi Score: {hiScore} </div>
-      <RandomCardDisplay
-        key={cardDisplayKey}
-        mountains={mountains}
-        selectedMountains={selectedMountains}
-        handleClick={handleClick}
-      />
+      <Scoreboard score={score} hiScore={hiScore} />
+      <div className='content'>
+        <RandomCardDisplay
+          key={cardDisplayKey}
+          mountains={mountains}
+          selectedMountains={selectedMountains}
+          handleClick={handleClick}
+        />
+      </div>
     </div>
   );
 };

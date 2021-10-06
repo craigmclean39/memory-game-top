@@ -16,23 +16,34 @@ const MountainCard = (props) => {
     );
   });
 
+  let topFlag = flags[0];
+  let bottomFlag = flags[0];
+  if (flags.length > 1) {
+    bottomFlag = flags[1];
+  }
+
   return (
     <React.Fragment>
       <div
-        className='mountain-card'
+        className='mountain-card shadow'
         onClick={(e) => {
           handleClick(e, id);
         }}>
-        <h6>{name}</h6>
-        <h6>{`${height}m`}</h6>
-        <img
-          className='mountain-card--image'
-          src={image}
-          alt={name}
-          width='150px'
-          height='150px'
-        />
-        <div className='mountain-card--flags'> {flags} </div>
+        <div className='mountain-card--flag-top'>{topFlag}</div>
+        <div className='mountain-card--content'>
+          <img
+            className='mountain-card--image'
+            src={image}
+            alt={name}
+            width='150px'
+            height='150px'
+          />
+          <div className='mountain-card--details'>
+            <h6>{name}</h6>
+            <h6>{`${height}m`}</h6>
+          </div>
+        </div>
+        <div className='mountain-card--flag-bottom'>{bottomFlag}</div>
       </div>
     </React.Fragment>
   );
