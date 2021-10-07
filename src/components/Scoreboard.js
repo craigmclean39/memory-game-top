@@ -6,8 +6,8 @@ const Scoreboard = (props) => {
     <div className='header'>
       <h1 className='header--title'>Mountain Memory</h1>
       <div className='header--scoreboard'>
-        <div>Score: {score}</div>
-        <div>Hi Score: {hiScore}</div>
+        <p>Score: {score}</p>
+        <p>Hi Score: {hiScore}</p>
       </div>
     </div>
   );

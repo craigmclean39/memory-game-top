@@ -22,6 +22,7 @@ const Gameplay = (props) => {
           handleClick={handleClick}
         />
       </div>
+      <div className='footer'></div>
     </div>
   );
 };
