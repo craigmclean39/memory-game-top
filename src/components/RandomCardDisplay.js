@@ -49,6 +49,9 @@ const RandomCardDisplay = (props) => {
           randomMountains.push(newRandomMountain);
         }
       }
+
+      //shuffle the array
+      randomMountains.sort(() => Math.random() - 0.5);
     }
 
     const mountainCards = randomMountains.map((mt) => {
