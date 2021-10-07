@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/memory-game-top/static/css/main.f02485da.chunk.css",
+    "main.js": "/memory-game-top/static/js/main.a60c8c54.chunk.js",
+    "main.js.map": "/memory-game-top/static/js/main.a60c8c54.chunk.js.map",
+    "runtime-main.js": "/memory-game-top/static/js/runtime-main.bd7d18de.js",
+    "runtime-main.js.map": "/memory-game-top/static/js/runtime-main.bd7d18de.js.map",
+    "static/js/2.f253c0ef.chunk.js": "/memory-game-top/static/js/2.f253c0ef.chunk.js",
+    "static/js/2.f253c0ef.chunk.js.map": "/memory-game-top/static/js/2.f253c0ef.chunk.js.map",
+    "index.html": "/memory-game-top/index.html",
+    "static/css/main.f02485da.chunk.css.map": "/memory-game-top/static/css/main.f02485da.chunk.css.map",
+    "static/js/2.f253c0ef.chunk.js.LICENSE.txt": "/memory-game-top/static/js/2.f253c0ef.chunk.js.LICENSE.txt",
+    "static/media/01-Everest.71aac765.png": "/memory-game-top/static/media/01-Everest.71aac765.png",
+    "static/media/02-K2.cca2a2fc.png": "/memory-game-top/static/media/02-K2.cca2a2fc.png",
+    "static/media/03-Kangchenjunga.6b4f8b4a.png": "/memory-game-top/static/media/03-Kangchenjunga.6b4f8b4a.png",
+    "static/media/04-Lhotse.e8a56037.png": "/memory-game-top/static/media/04-Lhotse.e8a56037.png",
+    "static/media/05-Makalu.3e29b0ab.png": "/memory-game-top/static/media/05-Makalu.3e29b0ab.png",
+    "static/media/06-Cho-Oyu.566f4b95.png": "/memory-game-top/static/media/06-Cho-Oyu.566f4b95.png",
+    "static/media/07-Dhaulagiri-I.20e3e362.png": "/memory-game-top/static/media/07-Dhaulagiri-I.20e3e362.png",
+    "static/media/08-Manaslu.ad34eb48.png": "/memory-game-top/static/media/08-Manaslu.ad34eb48.png",
+    "static/media/09-Nanga-Parbat.0748655e.png": "/memory-game-top/static/media/09-Nanga-Parbat.0748655e.png",
+    "static/media/10-Annapurna-I.1d84d985.png": "/memory-game-top/static/media/10-Annapurna-I.1d84d985.png",
+    "static/media/11-Gasherbrum-I.ed9faa04.png": "/memory-game-top/static/media/11-Gasherbrum-I.ed9faa04.png",
+    "static/media/12-Broad-Peak.fbca0a51.png": "/memory-game-top/static/media/12-Broad-Peak.fbca0a51.png",
+    "static/media/13-Gasherbrum-II.eb6d3ecf.png": "/memory-game-top/static/media/13-Gasherbrum-II.eb6d3ecf.png",
+    "static/media/14-Shisha-Pangma.190d44c3.png": "/memory-game-top/static/media/14-Shisha-Pangma.190d44c3.png",
+    "static/media/15-Gyachung-Kang.f8a4425a.png": "/memory-game-top/static/media/15-Gyachung-Kang.f8a4425a.png",
+    "static/media/16-Gasherbrum-III.2eea0f6c.png": "/memory-game-top/static/media/16-Gasherbrum-III.2eea0f6c.png",
+    "static/media/17-Annapurna-II.deebc856.png": "/memory-game-top/static/media/17-Annapurna-II.deebc856.png",
+    "static/media/18-Gasherbrum-IV.2f66fc0b.png": "/memory-game-top/static/media/18-Gasherbrum-IV.2f66fc0b.png",
+    "static/media/19-Himalchuli.82a68e73.png": "/memory-game-top/static/media/19-Himalchuli.82a68e73.png",
+    "static/media/mountain.1d564bfe.png": "/memory-game-top/static/media/mountain.1d564bfe.png",
+    "static/media/mountainCard.css": "/memory-game-top/static/media/titillium-web-v10-latin-regular.d3cea8a9.eot",
+    "static/media/pakistan.7fe6e021.png": "/memory-game-top/static/media/pakistan.7fe6e021.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bd7d18de.js",
+    "static/js/2.f253c0ef.chunk.js",
+    "static/css/main.f02485da.chunk.css",
+    "static/js/main.a60c8c54.chunk.js"
+  ]
+}
