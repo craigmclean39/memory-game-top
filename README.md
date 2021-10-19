@@ -121,7 +121,8 @@ Take a look at the demo <a href="https://craigmclean39.github.io/memory-game-top
 
 ## Contact
 
-Craig McLean - craig@craigmclean.dev.com
+Craig McLean - craig@craigmclean.dev<br>
+https://www.linkedin.com/in/mcleancraig/
 
 Project Link: [https://github.com/craigmclean39/memory-game-top](https://github.com/craigmclean39/memory-game-top)
 
